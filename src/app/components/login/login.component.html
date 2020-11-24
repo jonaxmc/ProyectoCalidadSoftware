@@ -1,0 +1,78 @@
+
+<!--
+<div class="card mt-5">
+  <div class="card-body">
+    <form #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm)">
+       TO UPDATE 
+      <input type="hidden" name="$key" #$key="ngModel" [(ngModel)]="usuarioService.selectedLogin.$key">
+
+      <div class="form-group">
+        <input type="text" class="form-control" name="correo" #correo="ngModel"
+          [(ngModel)]="usuarioService.selectedLogin.correo" placeholder="Correo">
+      </div>
+      <div class="form-group">
+        <input type="password" class="form-control" name="pass" #pass="ngModel"
+          [(ngModel)]="usuarioService.selectedLogin.pass" placeholder="Contraseña">
+      </div>
+
+
+      <div class="form-group">
+        <button class="btn btn-primary" type="submit">
+          <i class="fas fa-plus-circle"></i> INGRESAR
+        </button>
+
+      </div>
+    </form>
+  </div>
+</div>-->
+
+<div class="container">
+  <div class="row">
+    <div class="col"></div>
+    <div class="col">
+      <div class="row">
+        <div class="col-md-6">
+          <form id="box" #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm)" class="needs-validation" novalidate>
+            <h1>Login</h1>
+            <p class="text-muted"> Please enter your login and password!</p>
+            <input type="hidden" name="$key" #$key="ngModel" [(ngModel)]="usuarioService.selectedLogin.$key">
+            
+
+            <div class="form-group">
+              <input type="text" class="form-control" name="correo" #correo="ngModel"
+                [(ngModel)]="usuarioService.selectedLogin.correo" placeholder="Correo" required>
+                <div class="invalid-feedback">
+                  Por favor llene este campo
+                </div>
+            </div>
+
+            <div class="form-group">
+              <input type="password" class="form-control" name="pass" #pass="ngModel"
+                [(ngModel)]="usuarioService.selectedLogin.pass" placeholder="Contraseña" required>
+                <div class="invalid-feedback">
+                  Por favor llene este campo
+                </div>
+                 <a class="forgot text-muted"
+                href="#">Forgot
+                password?</a> 
+                <div class="form-group">
+                  <input type="submit" name="" value="Login" href="#">
+          
+                </div>
+                
+                
+            </div>
+            
+            <a class="forgot text-muted"
+                href="registro">REGISTRARSE</a> 
+          </form>
+
+
+        </div>
+      </div>
+    </div>
+    <div class="col">
+
+    </div>
+  </div>
+</div>
